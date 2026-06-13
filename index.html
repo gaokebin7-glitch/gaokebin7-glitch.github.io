@@ -5,24 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GKBCLOUD - AI 智能算力中心</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; text-align: center; background-color: #f9f9f9; padding: 100px 20px; }
-        h1 { color: #1a1a1a; font-size: 2.5em; }
-        p { color: #666; font-size: 1.2em; max-width: 600px; margin: 20px auto; }
-        .hero { margin-bottom: 50px; }
-        .btn { display: inline-block; padding: 15px 30px; background: #007bff; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: background 0.3s; }
-        .btn:hover { background: #0056b3; }
-        footer { margin-top: 100px; color: #aaa; font-size: 0.9em; }
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #fff; }
+        .logo { font-size: 4rem; font-weight: bold; margin-bottom: 30px; letter-spacing: -2px; }
+        .logo span:nth-child(1) { color: #4285f4; }
+        .logo span:nth-child(2) { color: #ea4335; }
+        .logo span:nth-child(3) { color: #fbbc05; }
+        .logo span:nth-child(4) { color: #4285f4; }
+        .logo span:nth-child(5) { color: #34a853; }
+        .logo span:nth-child(6) { color: #ea4335; }
+        
+        .search-container { width: 100%; max-width: 580px; padding: 0 20px; text-align: center; }
+        .search-box { width: 100%; padding: 15px 20px; border: 1px solid #dfe1e5; border-radius: 24px; font-size: 16px; outline: none; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
+        .btn-group { margin-top: 30px; }
+        .btn { padding: 10px 20px; background: #f8f9fa; border: 1px solid #f8f9fa; border-radius: 4px; color: #3c4043; cursor: pointer; margin: 5px; font-size: 14px; text-decoration: none; display: inline-block; }
+        .btn:hover { border: 1px solid #dadce0; box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+        .subscribe-btn { background: #4285f4; color: #fff; border: none; padding: 12px 25px; border-radius: 25px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>GKBCLOUD</h1>
-        <p>全球领先的 AI 算力与智能服务，为您的创意提供无限可能。</p>
-        <br>
-        <a href="https://buy.stripe.com/bJe00i6n9a0D3Rj2OG0VO00" class="btn">立即订阅服务 (Get Started)</a>
+
+    <div class="logo">
+        <span>G</span><span>K</span><span>B</span><span>C</span><span>L</span><span>O</span><span>U</span><span>D</span>
     </div>
-    <footer>
-        &copy; 2026 GKBCLOUD. All Rights Reserved.
-    </footer>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="探索无限 AI 算力...">
+        <div class="btn-group">
+            <a href="https://buy.stripe.com/bJe00i6n9a0D3Rj2OG0VO00" class="subscribe-btn">立即订阅服务</a>
+            <a href="https://api.gkbcloud.com" class="btn">进入控制台</a>
+        </div>
+    </div>
+
 </body>
 </html>
