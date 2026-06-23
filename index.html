@@ -39,7 +39,19 @@
         <a href="https://buy.stripe.com/bJe00i6n9a0D3Rj2OG0VO00" class="subscribe-btn">立即订阅服务</a>
          <a href="https://buy.stripe.com/8x25kCeTFdcPevX0Gy0VO01" class="subscribe-btn">按需支付</a>
     </div>
+const express = require('express');
+const app = express();
+app.use(express.json());
 
+// 你的核心搬运逻辑放这里
+app.post('/api/shopee-scrape', async (req, res) => {
+    const { url } = req.body;
+    // 调用上面我给你的 scrape 和 aiTranslate 函数
+    const result = await runAutoUpload(url); 
+    res.json({ success: true, data: result });
+});
+
+app.listen(3000, () => console.log('工具后台运行在 3000 端口'));
     <div class="footer-nav">
         <p>语言 (Language)： 简体中文 | English | 日本语 | Français</p>
         <p>关于我们 | 联系客服 | 隐私条款</p>
