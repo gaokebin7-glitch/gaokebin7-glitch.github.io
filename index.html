@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GKBCLOUD - AI 智能算力中心</title>
-    <style>
-        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; background: #fff; }
-        .main-logo { font-size: 5rem; font-weight: bold; margin-top: 15vh; }
-        /* LOGO 彩色逻辑 */
-        .c1 { color: #4285f4; } .c2 { color: #ea4335; } .c3 { color: #fbbc05; } .c4 { color: #4285f4; } .c5 { color: #34a853; } .c6 { color: #ea4335; }
-        
-        .search-area { width: 100%; max-width: 600px; margin-top: 20px; }
-        .search-box { width: 100%; padding: 15px 25px; border-radius: 30px; border: 1px solid #dfe1e5; box-shadow: 0 1px 6px rgba(0,0,0,0.1); outline: none; }
-        
-        .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 600px; margin-top: 40px; }
-        .ai-card { display: flex; align-items: center; padding: 10px; border: 1px solid #eee; border-radius: 8px; cursor: pointer; }
-        .ai-card img { width: 30px; margin-right: 15px; }
-        
-        .footer-nav { margin-top: auto; padding: 20px; text-align: center; border-top: 1px solid #eee; width: 100%; }
-        .subscribe-btn { background: #4285f4; color: #fff; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-    <div class="main-logo">
-        <span class="c1">G</span><span class="c2">K</span><span class="c3">B</span><span class="c4">C</span><span class="c5">L</span><span class="c6">O</span><span>U</span><span>D</span>
-    </div>
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm">
+        <div class="text-2xl font-black text-blue-600">GKBCLOUD</div>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition">立即开通</button>
+    </nav>
 
-    <div class="search-area">
-        <input type="text" class="search-box" placeholder="探索无限 AI 算力...">
-    </div>
-
-    <div class="ai-grid">
-        <div class="ai-card"><img src="chatgpt_icon.png"> ChatGPT</div>
-        <div class="ai-card"><img src="ernie_icon.png"> 文心一言</div>
+    <header class="py-20 text-center px-4">
+        <h1 class="text-5xl font-extrabold mb-6">AI 智能算力，一键分发</h1>
+        <p class="text-xl text-gray-600 mb-10">为跨境电商与独立开发者提供稳定、低延迟的 AI 算力中转服务。</p>
+        <div class="max-w-md mx-auto flex gap-2">
+            <input type="text" placeholder="输入链接，开始自动化搬运..." class="w-full p-4 rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="bg-black text-white px-6 py-4 rounded-xl font-bold">开始执行</button>
         </div>
+    </header>
 
-    <div style="margin-top: 30px;">
-        <a href="https://buy.stripe.com/bJe00i6n9a0D3Rj2OG0VO00" class="subscribe-btn">立即订阅服务</a>
-         <a href="https://buy.stripe.com/8x25kCeTFdcPevX0Gy0VO01" class="subscribe-btn">按需支付</a>
-    </div>
-const express = require('express');
-const app = express();
-app.use(express.json());
-
-// 你的核心搬运逻辑放这里
-app.post('/api/shopee-scrape', async (req, res) => {
-    const { url } = req.body;
-    // 调用上面我给你的 scrape 和 aiTranslate 函数
-    const result = await runAutoUpload(url); 
-    res.json({ success: true, data: result });
-});
-
-app.listen(3000, () => console.log('工具后台运行在 3000 端口'));
-    <div class="footer-nav">
-        <p>语言 (Language)： 简体中文 | English | 日本语 | Français</p>
-        <p>关于我们 | 联系客服 | 隐私条款</p>
-    </div>
+    <section class="max-w-5xl mx-auto py-12 grid md:grid-cols-3 gap-8 px-4">
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold mb-4">🚀 极速响应</h3>
+            <p class="text-gray-500">毫秒级 API 中转，拒绝等待，让你的 Agent 跑得更快。</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold mb-4">🛡️ 安全合规</h3>
+            <p class="text-gray-500">企业级加密通道，保护你的每一笔 API 调用数据。</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold mb-4">🤖 自动化流</h3>
+            <p class="text-gray-500">无需代码，轻松配置你的 AI 自动化工作流。</p>
+        </div>
+    </section>
 
 </body>
 </html>
